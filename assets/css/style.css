@@ -179,7 +179,6 @@ footer {
     background-color: #EDF5FC;
 }
 
-
 .footer-list {
     display: flex;
     flex-wrap: wrap;
@@ -193,7 +192,6 @@ footer {
 .footer-list li {
     margin: 10px;
 }
-
 
 .footer-list img {
     width: 40px;
@@ -295,8 +293,6 @@ select {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
-
 input[type="submit"] {
     display: block;
     width: 100%;
@@ -307,9 +303,3 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
-
-
-
-
-
-
