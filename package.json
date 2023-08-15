@@ -1,0 +1,11 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000r\u0000e\u0000E\u0000n\u0000t\u0000r\u0000e\u0000g\u0000a\u00002\u0000T\u0000o\u0000r\u0000r\u0000e\u0000s\u0000Z\u0000a\u0000p\u0000a\u0000t\u0000a\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

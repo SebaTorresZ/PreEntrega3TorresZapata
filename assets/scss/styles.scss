@@ -1,3 +1,8 @@
+/*Variables*/
+$primary-color: #B8C5D6;
+$secondary-color: #EDF5FC;
+$tertiary-color: #272D2D;
+
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Light.ttf");
@@ -11,7 +16,7 @@
 }
 
 body {
-    background-color: #B8C5D6;
+    background-color: $primary-color;
     margin: 0;
     font-family: "Roboto";
     font-weight: 300;
@@ -29,7 +34,7 @@ body {
 }
 
 header {
-    background-color: #EDF5FC;
+    background-color: $secondary-color;
     width: 100%;
     height: auto;
 
@@ -58,13 +63,19 @@ li {
 }
 
 .sections {
-    border-top: 2px solid #272D2D;
+    border-top: 2px solid $tertiary-color;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     margin: 0 auto;
     padding-bottom: 10px;
+    iframe {
+        display: inline-block;
+        margin: 0 auto;
+        width: auto;
+        height: 90%;
+    }
 }
 
 .section-left {
@@ -122,7 +133,7 @@ li {
     display: inline-block;
     max-width: 500px; 
     margin-right: 10px;
-    border: 1px solid #272D2D;
+    border: 1px solid $tertiary-color;
     border-radius: 4px;
     background-color: #A39BA8;
     @media (max-width:1020px) {
@@ -176,7 +187,7 @@ footer {
     margin: 0;
     padding: 20px;
     text-align: center;
-    background-color: #EDF5FC;
+    background-color: $secondary-color;
 }
 
 .footer-list {
@@ -187,17 +198,16 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.footer-list li {
+    li {
     margin: 10px;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 }
 
-.footer-list img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
 
 .study-description {
     text-align: center;
@@ -219,18 +229,16 @@ footer {
     max-width: 800px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #272D2D;
+    border: 1px solid $tertiary-color;
     background-color: #A39BA8;
-}
-
-.blog-publication h1 {
-    text-align: center;
-}
-
-.blog-publication img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0; 
+    h1 {
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0; 
+    }
 }
 
 .gallery {
@@ -246,18 +254,10 @@ footer {
 
 .item {
     flex: 1;
-}
-
-.item img {
-    width: 100%;
-    max-height: 1000px;
-}
-
-.sections iframe {
-    display: inline-block;
-    margin: 0 auto;
-    width: auto;
-    height: 90%;
+    img {
+        width: 100%;
+        max-height: 1000px;
+    }
 }
 
 .container {
