@@ -23,7 +23,7 @@ body {
 }
 
 #logo {
-  max-height: 100px;
+  max-height: 70px;
   padding: 5px;
 }
 
@@ -37,6 +37,7 @@ header {
   background-color: #EDF5FC;
   width: 100%;
   height: auto;
+  position: fixed;
 }
 
 nav {
@@ -61,6 +62,10 @@ li {
   display: inline-block;
   margin-right: 150px;
   font-size: 20px;
+}
+
+.first-section {
+  padding-top: 120px;
 }
 
 .sections {
@@ -108,6 +113,14 @@ li {
   .format-container {
     width: 100%;
   }
+}
+
+#navbarNav {
+  justify-content: space-around;
+}
+
+.nav-link.active, .navbar-nav .nav-link.show {
+  font-weight: 900;
 }
 
 .format {
