@@ -1,8 +1,8 @@
 /*Variables*/
-$primary-color: #B8C5D6;
-$secondary-color: #EDF5FC;
-$tertiary-color: #272D2D;
-
+$primary-color: #A0C49D;
+$secondary-color: #C4D7B2;
+$tertiary-color: #E1ECC8;
+$quaternary-color: #f2f7e8;
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Light.ttf");
@@ -38,7 +38,7 @@ body {
 }
 
 header {
-    background-color: $secondary-color;
+    background-color: $quaternary-color;
     width: 100%;
     height: auto;
     position: fixed;
@@ -151,7 +151,7 @@ li {
     margin-right: 10px;
     border: 1px solid $tertiary-color;
     border-radius: 4px;
-    background-color: #A39BA8;
+    background-color: $quaternary-color;
     @media (max-width:1020px) {
         flex-direction: column;
         margin-bottom: 10px;
@@ -208,6 +208,16 @@ footer {
     background-color: $secondary-color;
 }
 
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
 .footer-list {
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +263,7 @@ footer {
     width: 100%;
     padding: 20px;
     border: 1px solid $tertiary-color;
-    background-color: #A39BA8;
+    background-color: $quaternary-color;
     h1 {
         text-align: center;
     }
