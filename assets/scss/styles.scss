@@ -20,6 +20,10 @@ body {
     margin: 0;
     font-family: "Roboto";
     font-weight: 300;
+    min-width: 1220px;
+    @media (max-width:990px) {
+        min-width: 100%;
+    }
 }
 
 #logo {
