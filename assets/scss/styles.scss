@@ -122,9 +122,17 @@ li {
     text-align: justify;
     padding: 5px;
         @media (max-width: 910px) {
+            width:60%;
+    }
+        @media (max-width: 600px) {
+            width: 70%;
+    }
+        @media (max-width: 400px) {
             width: 100%;
     }
 }
+
+
 
 #navbarNav {
     justify-content: space-around;
@@ -286,6 +294,10 @@ footer {
     padding: 20px;
     border: 1px solid $tertiary-color;
     background-color: $quaternary-color;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    border-radius: 10px;
+    position: relative;
     h1 {
         text-align: center;
     }
@@ -294,29 +306,35 @@ footer {
         height: auto;
         margin: 20px 0; 
     }
+    .blog-picture {
+        border-radius: 20px;
+    }
 }
 
 .gallery {
     display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: $secondary-color;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-.item {
-    flex: 1;
     img {
-        width: 100%;
-        max-height: 1000px;
-        cursor: pointer;
-    }
-    :hover{
-        transform: scale(1.25);
-        transition: 1.5s;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        &:hover{
+            transform: scale(1.1);
+            transition: 1.5s;
+        }
     }
 }
 
@@ -343,6 +361,31 @@ label {
     margin-bottom: 5px;
     width: 100%;
 }
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.blog-publication {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name:show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+
 
 input[type="text"],
 input[type="email"],
