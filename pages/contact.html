@@ -54,24 +54,42 @@
         <div class="container">
             <h2>Agenda tu Hora</h2>
             <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label>Servicio:</label>
-                <select>
-                    <option>Servicio 1</option>
-                    <option>Servicio 2</option>
-                    <option>Servicio 3</option>
-                </select>
-                <label for="date">Fecha:</label>
-                <input type="text" id="date" name="date" required>
-                <label for="time">Hora:</label>
-                <input type="text" id="time" name="time" required>
-                <input type="submit" value="Agendar">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="service" class="form-label">Servicio:</label>
+                    <select class="form-select" id="service" name="service">
+                        <option>Terapia 1</option>
+                        <option>Terapia 2</option>
+                        <option>Terapia 3</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha:</label>
+                    <input type="text" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Hora:</label>
+                    <input type="text" class="form-control" id="time" name="time" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comentarios:</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+                </div>
+                <div class="comment-button">
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </div>
+
             </form>
         </div>
     </div>
+
     <footer class="footer">
         <section>
             <a class="btn button btn-floating m-1" href="https://www.facebook.com/" role=" button">
