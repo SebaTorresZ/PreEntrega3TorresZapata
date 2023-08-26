@@ -95,6 +95,18 @@ li {
   }
 }
 
+.carousel {
+  position: static;
+}
+
+.carousel-inner {
+  position: static;
+}
+
+.carousel-item {
+  position: static;
+}
+
 .section-right {
   width: 80%;
 }
@@ -247,6 +259,10 @@ footer {
 }
 .footer-list img:hover {
   filter: brightness(0.8);
+}
+
+.btn.button.btn-floating.m-1:hover {
+  background-color: #E1ECC8;
 }
 
 .study-description {
