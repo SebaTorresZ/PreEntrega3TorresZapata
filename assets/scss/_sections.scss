@@ -1,0 +1,38 @@
+.first-section {
+    padding-top: 120px !important;
+}
+
+.sections {
+    border-top: 2px solid $tertiary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    iframe {
+        display: inline-block;
+        margin: 0 auto;
+        width: auto;
+        height: 90%;
+    }
+}
+
+.section-left {
+    width: 20%;
+    @media (max-width: 910px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.section-right {
+    width: 80%;
+    @media (max-width: 910px) {
+        width: 100%;
+        text-align: justify;
+        padding: 5px;;
+    }
+}
