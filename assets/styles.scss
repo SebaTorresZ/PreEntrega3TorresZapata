@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Black.ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.ttf");
+    font-weight: 300;
+}
+
+@import '../assets/scss/blog';
+@import '../assets/scss/buttons';
+@import '../assets/scss/contact';
+@import '../assets/scss/footer';
+@import '../assets/scss/gallery';
+@import '../assets/scss/header';
+@import '../assets/scss/id';
+@import '../assets/scss/index';
+@import '../assets/scss/sections';
+@import '../assets/scss/variables';
