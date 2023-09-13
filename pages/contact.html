@@ -14,6 +14,8 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="shortcut icon" href="../assets/img/fav-icon.png" type="image/x-icon" />
+    <script src="../assets/js/contact.js"></script>
+
 
 </head>
 
@@ -53,7 +55,7 @@
     <div class="first-section">
         <div class="container">
             <h2>Agenda tu Hora</h2>
-            <form>
+            <form id="appointment-form">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -83,9 +85,8 @@
                     <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
                 </div>
                 <div class="comment-button">
-                    <button type="submit" class="btn btn-primary">Agendar</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Agendar</button>
                 </div>
-
             </form>
         </div>
     </div>
