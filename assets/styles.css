@@ -4,7 +4,7 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #007bff;
+  background-color: #739957;
   color: #fff;
   cursor: pointer;
 }
@@ -231,7 +231,9 @@ body {
   font-family: "Roboto";
   font-weight: 300;
   min-width: 1220px;
+  transition: background-color 0.5s, color 0.5s;
 }
+
 @media (max-width: 990px) {
   body {
     min-width: 100%;
@@ -429,3 +431,111 @@ input[type=submit] {
   src: url("../fonts/Roboto-Black.ttf");
   font-weight: 900;
 }/*# sourceMappingURL=styles.css.map */
+
+
+/* Variables para el modo oscuro */
+
+.dark-mode {
+  background-color: #6D8C6A;
+  color: #ffffff;
+}
+
+.dark-mode .format {
+  background-color: #8EAA85; 
+  color: #fff;
+}
+
+.dark-mode button {
+  background-color: #A7C79E; 
+  color: #fff;
+}
+
+.dark-mode .comment-button .btn {
+  background-color: #A7C79E; 
+}
+
+.dark-mode .btn.button.btn-floating.m-1:hover {
+  background-color: #A7C79E; 
+}
+
+.dark-mode .section-right {
+  color: #fff; 
+}
+
+.dark-mode footer {
+  background-color: #8EAA85; 
+  color: #fff; 
+}
+
+.dark-mode .blog-publication {
+  background-color: #8EAA85; 
+  border-color: #A7C79E; 
+  color: #fff; 
+}
+
+.dark-mode header {
+  background-color: #8EAA85; 
+  border-bottom: 1px solid #A7C79E; 
+}
+
+.dark-mode nav {
+  color: #fff; 
+}
+
+.dark-mode .grid-item {
+  background-color: #A7C79E;
+  color: #fff;
+}
+
+.dark-mode body {
+  background-color: #6D8C6A; 
+  color: #fff; 
+}
+
+.dark-mode ul {
+  border-bottom: 1px solid #A7C79E; 
+  color: #fff; 
+}
+
+.dark-mode li {
+  margin-right: 10px;
+  color: #fff; 
+}
+
+.dark-mode .format-container {
+  background-color: #8EAA85;
+  color: #fff; 
+}
+
+.dark-mode .box {
+  background-color: #A7C79E; 
+  border-color: #A7C79E;
+  color: #fff; 
+}
+
+.dark-mode h2 {
+  color: #fff; 
+}
+
+.dark-mode textarea {
+  background-color: #A7C79E; 
+  color: #fff; 
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /
+}
+
+.floating-button button {
+  background-color: #739957; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
