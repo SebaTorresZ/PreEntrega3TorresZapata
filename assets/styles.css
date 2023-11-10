@@ -423,17 +423,16 @@ input[type=submit] {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Light.ttf");
+  src: url("../assets/fonts/Roboto-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Black.ttf");
+  src: url("../assets/fonts/Roboto-Black.ttf");
   font-weight: 900;
-}/*# sourceMappingURL=styles.css.map */
+}
 
 
-/* Variables para el modo oscuro */
 
 .dark-mode {
   background-color: #6D8C6A;

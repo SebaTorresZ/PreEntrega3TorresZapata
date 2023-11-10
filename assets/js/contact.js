@@ -27,35 +27,54 @@ function validateFields(fields) {
         }
 
         if (isEmpty) {
-            alert('Por favor, complete todos los campos.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Por favor, complete todos los campos.'
+            });
             document.getElementById('appointment-form').reset();
         } else {
-            const confirmation = confirm('¿Estás seguro de agendar esta cita?');
-            if (confirmation) {
-                alert('Hora agendada correctamente.');
+            Swal.fire({
+                icon: 'question',
+                title: 'Confirmar cita',
+                text: '¿Estás seguro de agendar esta cita?',
+                showCancelButton: true,
+                confirmButtonText: 'Sí, agendar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Hora agendada correctamente.'
+                    });
 
-                const nuevaPersona = new Persona(
-                    formData.name,
-                    formData.email,
-                    formData.service,
-                    formData.office,
-                    formData.date,
-                    formData.time
-                );
+                    const nuevaPersona = new Persona(
+                        formData.name,
+                        formData.email,
+                        formData.service,
+                        formData.office,
+                        formData.date,
+                        formData.time
+                    );
 
-                personasArray.push(nuevaPersona);
+                    personasArray.push(nuevaPersona);
 
-                console.log('Datos de la persona:', nuevaPersona);
-                console.log('Todas las personas agregadas:', personasArray);
+                    console.log('Datos de la persona:', nuevaPersona);
+                    console.log('Todas las personas agregadas:', personasArray);
 
-                document.getElementById('appointment-form').reset();
-            } else {
-                alert('La cita no fue agendada, vuelva a rellenar los campos.');
-            }
+                    document.getElementById('appointment-form').reset();
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Información',
+                        text: 'La cita no fue agendada, vuelva a rellenar los campos.'
+                    });
+                }
+            });
         }
     };
 }
-
 
 const validateForm = validateFields(['name', 'email', 'service', 'office', 'date', 'time']);
 

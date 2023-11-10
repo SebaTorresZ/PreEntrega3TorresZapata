@@ -14,9 +14,13 @@ function calcularCostoTotal() {
     const formulario = document.getElementById("formulario");
     const terapiaSeleccionada = formulario.querySelector('input[name="terapia"]:checked');
     const oficinaSeleccionada = formulario.querySelector('input[name="oficina"]:checked');
-    
+
     if (!terapiaSeleccionada || !oficinaSeleccionada) {
-        alert("Debes seleccionar una terapia y una oficina.");
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Debes seleccionar una terapia y una oficina.'
+        });
         return;
     }
 
@@ -27,9 +31,21 @@ function calcularCostoTotal() {
         costoTotal += preciosServicios[checkboxes[i].value];
     }
 
+    Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Costo Total: $' + costoTotal + ' CLP',
+    });
+
     document.getElementById("costoTotal").textContent = "Costo Total: $" + costoTotal + " CLP";
 }
 
 function resetearCostoTotal() {
+    Swal.fire({
+        icon: 'info',
+        title: 'Información',
+        text: 'Costo Total reseteado a $0 CLP.',
+    });
+
     document.getElementById("costoTotal").textContent = "Costo Total: $0 CLP";
 }

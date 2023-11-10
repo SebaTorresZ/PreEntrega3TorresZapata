@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('registerModal').classList.remove('show');
     });
 
- 
     const isUserLoggedIn = localStorage.getItem('userLoggedIn');
 
     if (isUserLoggedIn === 'true') {
