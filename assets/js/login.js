@@ -1,49 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
-
+    const loginForm = document.querySelector('#loginForm');
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        const email = document.querySelector('#email').value;
+        const password = document.querySelector('#password').value;
+        const Users = JSON.parse(localStorage.getItem('users')) || [];
+        const validUser = Users.find(user => user.email === email && user.password === password);
 
+        if (!validUser) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Usuario y/o contraseña incorrectos',
+            });
+            return;
+        }
 
-        localStorage.setItem('userLoggedIn', true);
-        alert('Inicio de sesión exitoso');
-        loginForm.reset();
-        document.getElementById('loginModal').classList.remove('show');
+        Swal.fire({
+            icon: 'success',
+            title: `Bienvenido ${validUser.name}`,
+            showConfirmButton: false,
+            timer: 2000,
+        }).then(() => {
+            localStorage.setItem('login_success', JSON.stringify(validUser));
+            window.location.href = '/index.html';
+        });
     });
-
-    registerForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-
-        const user = {
-            name,
-            email,
-        };
-        localStorage.setItem('user', JSON.stringify(user));
-        alert('Registro exitoso');
-        registerForm.reset();
-        document.getElementById('registerModal').classList.remove('show');
-    });
-
- 
-    const isUserLoggedIn = localStorage.getItem('userLoggedIn');
-
-    if (isUserLoggedIn === 'true') {
-        
-    } else {
-        
-    }
-
-
-    const userData = localStorage.getItem('user');
-
-    if (userData) {
-        const user = JSON.parse(userData);
-    }
 });
