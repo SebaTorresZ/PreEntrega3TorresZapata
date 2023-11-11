@@ -233,14 +233,15 @@
         <section class="sections">
             <div class="format">
                 <div class="title">
-                    <h2>Deja aquí tu comentario: </h2>
+                    <h2>Deja aquí tu comentario:</h2>
                     <div class="content">
-                        <textarea placeholder="Escribe tu comentario aquí"></textarea>
+                        <textarea id="commentInput" placeholder="Escribe tu comentario aquí"></textarea>
                     </div>
                     <div class="comment-button">
-                        <button type="submit" class="btn">Enviar</button>
+                        <button type="button" class="btn" onclick="guardarComentario()">Enviar</button>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -306,6 +307,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/dark.js"></script>
+    <script src="./assets/js/review.js"></script>
 
 </body>
 
